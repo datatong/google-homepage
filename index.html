@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Link required for the search bar and apps icon-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+      .topnav-container {
+          display: flex;
+          justify-content: space-between;
+      }
+     /*-Styling for nav bar using the ul tags*/
+     /*ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+            display: inline;
+      }*/
+
+      #apps-icon {
+          position: relative;
+          top: 5px;
+          padding: 5px;
+      }
+
+      #topnav-left {
+          margin-top: 10px;
+      }
+      #sign-in-button {
+          cursor: pointer;
+          color: white;
+          background: #1a73e8;
+          padding: 9px 15px;
+          min-width: 80px;
+          margin-left: 8px;
+          margin-right: 8px;
+          border: 1px solid transparent;
+          border-radius: 4px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: .25px;
+          text-align: center;
+          vertical-align: middle;
+          box-sizing:border-box;
+          white-space: nowrap;
+          font-family: arial, sans-serif;
+      }
+
+      a {
+          color: #222;
+          font-size: 14px;
+          font-family: arial, sans-serif;
+          text-decoration: none;
+      }
+
+      .img-container{
+        display: flex;
+        height: 325px;
+        justify-content: center;
+        align-items: flex-end;
+      }
+
+      input {
+        margin: auto;
+        display: flex;
+        width: 584px;
+        height: 34px;
+        border-radius: 24px;
+        box-shadow: none;
+        border: 1px solid #dfe1e5;
+        background: #fff;
+        background-image: url(https://www.shareicon.net/data/128x128/2017/03/22/881331_search_512x512.png);
+        background-position: left;
+        background-size: 40px;
+        background-repeat: no-repeat;
+      }
+
+      .material-icons{
+          margin: auto;
+          color: gray;
+
+      }
+
+      .button-container {
+          position: relative;
+          top: 10px;
+          margin: auto;
+          width: 450px;
+          justify-content: center;
+          align-items: center;
+      }
+      
+      .submit-buttons {
+        display: flex;
+        justify-content: center;
+      }
+
+      #google-search {
+          background-color: #f8f9fa;
+          border: 1px solid #f8f9fa;
+          border-radius: 4px;
+          font-family: arial,sans-serif;
+          font-size: 14px;
+          margin: 11px 4px;
+          height: 36px;
+          min-width: 54px;
+          text-align: center;
+          cursor: pointer;
+          user-select: none;
+      }
+
+      #feeling-lucky {
+          background-color: #f8f9fa;
+          border: 1px solid #f8f9fa;
+          border-radius: 4px;
+          font-family: arial,sans-serif;
+          font-size: 14px;
+          margin: 11px 4px;
+          height: 36px;
+          min-width: 54px;
+          text-align: center;
+          cursor: pointer;
+          user-select: none;
+      }
+
+      .footer {
+        background-color:#f2f2f2;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height: 5%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .logo-img {
+          max-width: 100%;
+          height: auto;
+      }
+
+      #cn-image {
+          max-width: 100%;
+          height: auto;
+      }
+
+    @media (min-width: 2000px) { a  {
+                                font-size: 30px;
+                                }
+                                #sign-in-button {
+                                    font-size: 30px;
+                                }
+                                #google-search, #feeling-lucky {
+                                    font-size: 28px;
+                                }
+                                .button-container{
+                                    position: relative;
+                                }
+                                .submit-buttons {
+                                    width: 475px;
+                                    display: flex;
+                                    justify-content: space-evenly;
+                                }
+                            }
+
+  </style>  
+</head>
+<div>
+    <nav class="topnav-container">
+
+        <!--Attempted to make the nav bar with unordered list-->
+        <!--<nav>
+            <ul>
+                <div id="topnav-left">     
+                    <li><a href="about">About</a></li>
+                    <li><a href="store">Store</a></li>
+                </div>
+
+                <div id="topnav-right"></div>
+                    <li><a href="gmail">Gmail</a></li>
+                    <li><a href="Images">Images</a></li>
+                </div>
+                
+             </ul>
+        </nav>-->
+
+        <div id="topnav-left">
+            <a href="about">About</a>
+            <a href="store">Store</a>
+        </div>
+
+        <div id="topnav-right">
+            <a href="gmail">Gmail</a>
+            <a href="images">Images</a>
+            <span id="apps-icon" class="material-icons">
+                apps
+            </span>
+            <button id="sign-in-button" type="button" name="sign-in">Sign In</button>
+        </div>
+    </nav>
+
+    <div class="img-container">
+        <div>
+            <img class="logo-img" src="googlelogo.png" alt="Google logo">
+        </div>
+    </div>
+
+    <form>
+        <input type="text" id="search-bar" name="search-bar">
+            <!--<i class="material-icons">search</i>-->
+        <div class="button-container">
+            <div class="submit-buttons">
+                <button type="submit" id="google-search">Google Search</button> 
+                <button type="submit" id="feeling-lucky">I'm Feeling Lucky</button>
+            </div>
+        </div>
+        
+    </form>
+
+    <div class="footer">
+        <div class="foot-left">
+            <a href="advertising">Advertising</a>
+            <a href="business">Business</a>
+            <a href="how-search-works">How Search Works</a>
+        </div>
+
+        <div class="foot-center">
+            <img id="cn-image" src="carbon-neutral.png">
+            <a href="carbon-neutral-claim">Carbon Neutral Since 2007</a>
+        </div>
+
+        <div class="foot-right">
+            <a href="privacy">Privacy</a>
+            <a href="terms">Terms</a>
+            <a href="settings">Settings</a>
+        </div>
+    </div>
+</div>
+</html>
